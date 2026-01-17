@@ -42,6 +42,15 @@
         .hero-section { background: #0f172a; color: white; padding: 100px 0; }
         .section-padding { padding: 80px 0; }
         .tech-icon { font-size: 0.85rem; font-weight: bold; color: var(--accent); border: 1px solid var(--accent); padding: 4px 12px; border-radius: 6px; margin-right: 5px; }
+        
+        /* Testimonial Styling */
+        .testimonial-card {
+            border-left: 5px solid var(--accent);
+            background: #f8fafc;
+            transition: 0.3s;
+        }
+        .testimonial-card:hover { background: #f1f5f9; }
+        .quote-icon { font-size: 2rem; color: #cbd5e1; line-height: 1; }
     </style>
 </head>
 <body>
@@ -53,6 +62,7 @@
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
                 <li class="nav-item"><a class="nav-link" href="#preview">Web Interface</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Feedback</a></li>
                 <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li>
                 <li class="nav-item"><a class="nav-link" href="#admin">Admin Hub</a></li>
             </ul>
@@ -144,7 +154,36 @@
     </div>
 </section>
 
-<section id="team" class="section-padding bg-white">
+<section id="testimonials" class="section-padding bg-white">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <h2 class="fw-bold">Industry Feedback</h2>
+            <p class="text-muted">What cybersecurity professionals are saying about the IntruSight concept.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+                <div class="testimonial-card p-4 rounded-3 h-100">
+                    <div class="quote-icon">“</div>
+                    <p class="fst-italic text-dark">"The integration of React with real-time Snort alerts provides a level of visibility that is often missing in standard command-line IDS setups. A very promising proactive tool."</p>
+                    <hr>
+                    <h6 class="fw-bold mb-0">Dr. Sarah Chen</h6>
+                    <small class="text-muted">Cybersecurity Researcher</small>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="testimonial-card p-4 rounded-3 h-100">
+                    <div class="quote-icon">“</div>
+                    <p class="fst-italic text-dark">"Using Python data mining for log correlation is exactly what modern Security Operation Centers need. This project addresses the 'alert fatigue' problem effectively."</p>
+                    <hr>
+                    <h6 class="fw-bold mb-0">James Miller</h6>
+                    <small class="text-muted">Senior Network Architect</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="team" class="section-padding bg-light">
     <div class="container text-center">
         <h2 class="fw-bold mb-5">Our Team</h2>
         <div class="row g-4">
@@ -153,7 +192,7 @@
             <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>R</h5><p class="text-primary small">Backend Developer</p></div></div>
             <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>A</h5><p class="text-primary small">Data analysis & Correlation Engineer</p></div></div>
             <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>K</h5><p class="text-primary small">Frontend & Dashboard Visualization Developer</p></div></div>
-            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm bg-light"><h5>V</h5><p class="text-primary small">Visualization & Deployment Engineer</p></div></div>
+            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>V</h5><p class="text-primary small">Visualization & Deployment Engineer</p></div></div>
         </div>
     </div>
 </section>
@@ -187,8 +226,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
-
