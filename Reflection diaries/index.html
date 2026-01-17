@@ -8,10 +8,12 @@
     <style>
         body { background-color: #f8fafc; color: #1e293b; padding: 50px 0; }
         .hub-card { border: none; border-radius: 20px; background: white; box-shadow: 0 15px 35px rgba(0,0,0,0.05); overflow: hidden; }
-        .hub-header { background: #0f172a; color: white; padding: 40px 20px; text-center; }
+        .hub-header { background: #0f172a; color: white; padding: 40px 20px; }
         .table-container { padding: 30px; }
-        .btn-view { border-radius: 8px; transition: 0.2s; }
+        .btn-view { border-radius: 8px; transition: 0.2s; min-width: 100px; }
         .btn-view:hover { background: #0f172a; color: white; }
+        .week-title { margin-top: 40px; }
+        .badge-new { background-color: #10b981; font-size: 0.75rem; vertical-align: middle; }
     </style>
 </head>
 <body>
@@ -24,47 +26,67 @@
         </div>
 
         <div class="table-container">
-            <h4 class="fw-bold mb-4 border-bottom pb-2">Week 1 (Jan 5 - Jan 11)</h4>
             
-            <table class="table align-middle">
+            <h4 class="fw-bold mb-4 border-bottom pb-2 week-title">Week 5 (Feb 2 - Feb 8)</h4>
+            <table class="table align-middle mb-5">
                 <thead class="table-light">
-                    <tr>
-                        <th>Team Member</th>
-                        <th>Project Role</th>
-                        <th class="text-end">Action</th>
-                    </tr>
+                    <tr><th>Team Member</th><th>Project Role</th><th class="text-end">Action</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><strong>Ja</strong></td>
-                        <td><span class="text-muted">Project Leader/Scrum Master</span></td>
-                        <td class="text-end"><a href="week1/javier_w1.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>L</strong></td>
-                        <td><span class="text-muted">IDS configuration & Network Security Engineer</span></td>
-                        <td class="text-end"><a href="week1/lucas_w1.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Rh</strong></td>
-                        <td><span class="text-muted">Backend Developer</span></td>
-                        <td class="text-end"><a href="week1/rhithan_w1.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Aa</strong></td>
-                        <td><span class="text-muted">Data analysis & Correlation Engineer</span></td>
-                        <td class="text-end"><a href="week1/aaron_w1.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Ke</strong></td>
-                        <td><span class="text-muted">Frontend & Dashboard Visualization Developer</span></td>
-                        <td class="text-end"><a href="week1/kelvin_w1.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Vi</strong></td>
-                        <td><span class="text-muted">Visualization & Deployment Engineer</span></td>
-                        <td class="text-end"><a href="week1/vincent_w1.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td>
-                    </tr>
+                    <tr><td><strong>Javier</strong></td><td><span class="text-muted">Project Leader</span></td><td class="text-end"><a href="week5/javier_w5.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Lucas</strong></td><td><span class="text-muted">Network Security</span></td><td class="text-end"><a href="week5/lucas_w5.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Rhithan</strong></td><td><span class="text-muted">Backend Developer</span></td><td class="text-end"><a href="week5/rhithan_w5.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Aaron</strong></td><td><span class="text-muted">Data Analysis</span></td><td class="text-end"><a href="week5/aaron_w5.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Kelvin</strong></td><td><span class="text-muted">Frontend Developer</span></td><td class="text-end"><a href="week5/kelvin_w5.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Vincent</strong></td><td><span class="text-muted">Deployment Engineer</span></td><td class="text-end"><a href="week5/vincent_w5.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
+                </tbody>
+            </table>
+
+            <h4 class="fw-bold mb-4 border-bottom pb-2 week-title text-secondary">Week 4 (Jan 26 - Feb 1)</h4>
+            <table class="table align-middle mb-5">
+                <tbody>
+                    <tr><td><strong>Javier</strong></td><td><span class="text-muted">Project Leader</span></td><td class="text-end"><a href="week4/javier_w4.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Lucas</strong></td><td><span class="text-muted">Network Security</span></td><td class="text-end"><a href="week4/lucas_w4.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Rhithan</strong></td><td><span class="text-muted">Backend Developer</span></td><td class="text-end"><a href="week4/rhithan_w4.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Aaron</strong></td><td><span class="text-muted">Data Analysis</span></td><td class="text-end"><a href="week4/aaron_w4.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Kelvin</strong></td><td><span class="text-muted">Frontend Developer</span></td><td class="text-end"><a href="week4/kelvin_w4.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Vincent</strong></td><td><span class="text-muted">Deployment Engineer</span></td><td class="text-end"><a href="week4/vincent_w4.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                </tbody>
+            </table>
+
+            <h4 class="fw-bold mb-4 border-bottom pb-2 week-title text-secondary">Week 3 (Jan 19 - Jan 25)</h4>
+            <table class="table align-middle mb-5">
+                <tbody>
+                    <tr><td><strong>Javier</strong></td><td><span class="text-muted">Project Leader</span></td><td class="text-end"><a href="week3/javier_w3.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Lucas</strong></td><td><span class="text-muted">Network Security</span></td><td class="text-end"><a href="week3/lucas_w3.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Rhithan</strong></td><td><span class="text-muted">Backend Developer</span></td><td class="text-end"><a href="week3/rhithan_w3.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Aaron</strong></td><td><span class="text-muted">Data Analysis</span></td><td class="text-end"><a href="week3/aaron_w3.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Kelvin</strong></td><td><span class="text-muted">Frontend Developer</span></td><td class="text-end"><a href="week3/kelvin_w3.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Vincent</strong></td><td><span class="text-muted">Deployment Engineer</span></td><td class="text-end"><a href="week3/vincent_w3.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                </tbody>
+            </table>
+
+            <h4 class="fw-bold mb-4 border-bottom pb-2 week-title text-secondary">Week 2 (Jan 12 - Jan 18)</h4>
+            <table class="table align-middle mb-5">
+                <tbody>
+                    <tr><td><strong>Javier</strong></td><td><span class="text-muted">Project Leader</span></td><td class="text-end"><a href="week2/javier_w2.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Lucas</strong></td><td><span class="text-muted">Network Security</span></td><td class="text-end"><a href="week2/lucas_w2.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Rhithan</strong></td><td><span class="text-muted">Backend Developer</span></td><td class="text-end"><a href="week2/rhithan_w2.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Aaron</strong></td><td><span class="text-muted">Data Analysis</span></td><td class="text-end"><a href="week2/aaron_w2.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Kelvin</strong></td><td><span class="text-muted">Frontend Developer</span></td><td class="text-end"><a href="week2/kelvin_w2.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Vincent</strong></td><td><span class="text-muted">Deployment Engineer</span></td><td class="text-end"><a href="week2/vincent_w2.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                </tbody>
+            </table>
+
+            <h4 class="fw-bold mb-4 border-bottom pb-2 week-title text-secondary">Week 1 (Jan 5 - Jan 11)</h4>
+            <table class="table align-middle">
+                <tbody>
+                    <tr><td><strong>Javier</strong></td><td><span class="text-muted">Project Leader</span></td><td class="text-end"><a href="week1/javier_w1.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Lucas</strong></td><td><span class="text-muted">Network Security</span></td><td class="text-end"><a href="week1/lucas_w1.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Rhithan</strong></td><td><span class="text-muted">Backend Developer</span></td><td class="text-end"><a href="week1/rhithan_w1.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Aaron</strong></td><td><span class="text-muted">Data Analysis</span></td><td class="text-end"><a href="week1/aaron_w1.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Kelvin</strong></td><td><span class="text-muted">Frontend Developer</span></td><td class="text-end"><a href="week1/kelvin_w1.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
+                    <tr><td><strong>Vincent</strong></td><td><span class="text-muted">Deployment Engineer</span></td><td class="text-end"><a href="week1/vincent_w1.pdf" target="_blank" class="btn btn-sm btn-outline-secondary btn-view">View PDF</a></td></tr>
                 </tbody>
             </table>
 
