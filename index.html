@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IntruSight | Web-Based IDS Analytics</title>
+    <title>IntruSight | Web-Based Proactive IDS Analytics</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
@@ -19,7 +19,7 @@
             transition: transform 0.3s ease;
             background: #fff;
         }
-        .browser-frame:hover { transform: scale(1.02); }
+        .browser-frame:hover { transform: scale(1.01); }
         .browser-header { 
             background: #1e293b; 
             padding: 12px; 
@@ -43,14 +43,15 @@
         .section-padding { padding: 80px 0; }
         .tech-icon { font-size: 0.85rem; font-weight: bold; color: var(--accent); border: 1px solid var(--accent); padding: 4px 12px; border-radius: 6px; margin-right: 5px; }
         
-        /* Testimonial Styling */
-        .testimonial-card {
-            border-left: 5px solid var(--accent);
-            background: #f8fafc;
-            transition: 0.3s;
-        }
+        /* Card & Testimonial Styling */
+        .feature-card { transition: 0.3s; border: 1px solid transparent; height: 100%; }
+        .feature-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .testimonial-card { border-left: 5px solid var(--accent); background: #f8fafc; transition: 0.3s; }
         .testimonial-card:hover { background: #f1f5f9; }
         .quote-icon { font-size: 2rem; color: #cbd5e1; line-height: 1; }
+        
+        .nav-link { font-weight: 500; }
+        .role-badge { background: #e0f2fe; color: #0369a1; font-size: 0.7rem; padding: 3px 10px; border-radius: 12px; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -58,13 +59,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
         <a class="navbar-brand fw-bold" href="#">INTRU<span class="text-info">SIGHT</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                <li class="nav-item"><a class="nav-link" href="#preview">Web Interface</a></li>
-                <li class="nav-item"><a class="nav-link" href="#testimonials">Feedback</a></li>
-                <li class="nav-item"><a class="nav-link" href="#team">Our Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="#admin">Admin Hub</a></li>
+                <li class="nav-item"><a class="nav-link" href="#features">Objectives</a></li>
+                <li class="nav-item"><a class="nav-link" href="#preview">Interface</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Impact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="#admin">Admin</a></li>
             </ul>
         </div>
     </div>
@@ -74,11 +78,11 @@
     <div class="container">
         <h1 class="display-3 fw-bold mb-3">IntruSight</h1>
         <p class="h4 text-info mb-4 font-monospace">Web-Based Proactive IDS Analytics</p>
-        <p class="lead mb-5 opacity-75 mx-auto" style="max-width: 700px;">
-            A modern cybersecurity dashboard utilizing <strong>Python Data Mining</strong> and <strong>React</strong> to visualize network threats from Snort and Zeek engines.
+        <p class="lead mb-5 opacity-75 mx-auto" style="max-width: 800px;">
+            Harnessing <strong>Python Data Mining</strong> and <strong>Machine Learning</strong> to provide real-time network traffic analysis, automated filtering, and intelligent intrusion recognition.
         </p>
         <div class="d-flex justify-content-center gap-3">
-            <a href="#preview" class="btn btn-info btn-lg px-4 fw-bold">View Demo Interface</a>
+            <a href="#preview" class="btn btn-info btn-lg px-4 fw-bold text-dark">Explore Interface</a>
             <a href="#admin" class="btn btn-outline-light btn-lg px-4">Project Documentation</a>
         </div>
     </div>
@@ -87,26 +91,26 @@
 <section id="features" class="section-padding bg-white">
     <div class="container">
         <div class="row text-center mb-5">
-            <h2 class="fw-bold">Technical Features</h2>
-            <p class="text-muted">High-performance tools integrated into one web-based platform.</p>
+            <h2 class="fw-bold">Core Project Objectives</h2>
+            <p class="text-muted">High-performance features aligned with modern cybersecurity requirements.</p>
         </div>
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="card h-100 p-4 shadow-sm border-0 bg-light">
-                    <h5 class="fw-bold">Intrusion Detection</h5>
-                    <p class="small text-muted">Native integration with <strong>Snort 3</strong> and <strong>Zeek</strong> for real-time packet inspection and log generation.</p>
+                <div class="card p-4 shadow-sm feature-card bg-light">
+                    <h5 class="fw-bold text-primary">Traffic & Alert Analytics</h5>
+                    <p class="small text-muted">Aggregates IDS data to provide a consolidated view of network frequencies, protocols, and alert trends via dynamic timelines (Obj. 1 & 8).</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card h-100 p-4 shadow-sm border-0 bg-light">
-                    <h5 class="fw-bold">ML Anomaly Detection</h5>
-                    <p class="small text-muted">Using <strong>Python (Scikit-learn)</strong> to cluster log data and identify zero-day attack patterns.</p>
+                <div class="card p-4 shadow-sm feature-card bg-light">
+                    <h5 class="fw-bold text-primary">Intelligent Behavior Filtering</h5>
+                    <p class="small text-muted">Detects suspicious transactions using threshold rules for high-volume traffic and repeated authentication patterns (Obj. 3).</p>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card h-100 p-4 shadow-sm border-0 bg-light">
-                    <h5 class="fw-bold">React Visuals</h5>
-                    <p class="small text-muted">Highly responsive <strong>React.js</strong> components including Recharts for live traffic visualization.</p>
+                <div class="card p-4 shadow-sm feature-card bg-light">
+                    <h5 class="fw-bold text-primary">ML Anomaly Detection</h5>
+                    <p class="small text-muted">Leverages data mining and machine learning to recognize unusual patterns where traditional rules-based systems fall short (Obj. 5).</p>
                 </div>
             </div>
         </div>
@@ -117,12 +121,17 @@
     <div class="container">
         <div class="row align-items-center mb-5">
             <div class="col-lg-5">
-                <h2 class="fw-bold mb-3">The Web Dashboard</h2>
-                <p class="text-muted">Our web-based approach allows security analysts to monitor network health from anywhere and anytime. The frontend communicates via a Python FastAPI to fetch indexed logs from MongoDB.</p>
+                <h2 class="fw-bold mb-3">Configurable Command Center</h2>
+                <p class="text-muted mb-4">A fully interactive dashboard for administrators to monitor network health, configure threat parameters, and select trained ML models (Obj. 6 & 7).</p>
+                <ul class="list-unstyled small">
+                    <li class="mb-2">✅ <strong>Logical Quarantine:</strong> Track and manage malicious traffic from blacklisted domains (Obj. 2).</li>
+                    <li class="mb-2">✅ <strong>Custom Definitions:</strong> Adjust thresholds for DoS and dangerous traffic definitions (Obj. 4).</li>
+                    <li class="mb-2">✅ <strong>Forensic Search:</strong> Advanced search and filtering by category, time, and protocol.</li>
+                </ul>
                 <div class="mt-4">
                     <span class="tech-icon">React 19</span>
+                    <span class="tech-icon">Python</span>
                     <span class="tech-icon">FastAPI</span>
-                    <span class="tech-icon">MongoDB</span>
                 </div>
             </div>
             <div class="col-lg-7">
@@ -135,48 +144,41 @@
                 </div>
             </div>
         </div>
-
-        <div class="row align-items-center flex-row-reverse mt-5">
-            <div class="col-lg-5">
-                <h2 class="fw-bold mb-3">Deep-Dive Analytics</h2>
-                <p class="text-muted">Beyond simple alerts, IntruSight provides a forensic view. Analyze historical data trends to improve firewall rules and network security posture.</p>
-            </div>
-            <div class="col-lg-7">
-                <div class="browser-frame">
-                    <div class="browser-header">
-                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
-                        <div class="browser-address">intrusight.io/dashboard/analytics</div>
-                    </div>
-                    <img src="assets/dashboard-analytics.png" class="img-fluid" alt="Analytics Detail View">
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
 <section id="testimonials" class="section-padding bg-white">
     <div class="container">
         <div class="row text-center mb-5">
-            <h2 class="fw-bold">Industry Feedback</h2>
-            <p class="text-muted">What cybersecurity professionals are saying about the IntruSight concept.</p>
+            <h2 class="fw-bold">Industry Perspective</h2>
+            <p class="text-muted">Marketing the future of proactive network defense.</p>
         </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-5">
-                <div class="testimonial-card p-4 rounded-3 h-100">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="testimonial-card p-4 rounded-4 h-100 shadow-sm">
                     <div class="quote-icon">“</div>
-                    <p class="fst-italic text-dark">"The integration of React with real-time Snort alerts provides a level of visibility that is often missing in standard command-line IDS setups. A very promising proactive tool."</p>
+                    <p class="fst-italic text-dark">"The React-based visualization is a breakthrough for small-to-midsize SOC teams who need situational awareness without the complexity of enterprise tools."</p>
                     <hr>
-                    <h6 class="fw-bold mb-0">Dr. Sarah Chen</h6>
-                    <small class="text-muted">Cybersecurity Researcher</small>
+                    <h6 class="fw-bold mb-0">Sarah Jenkins</h6>
+                    <small class="text-muted">SOC Manager, NetGuard Systems</small>
                 </div>
             </div>
-            <div class="col-md-5">
-                <div class="testimonial-card p-4 rounded-3 h-100">
+            <div class="col-md-4">
+                <div class="testimonial-card p-4 rounded-4 h-100 shadow-sm">
                     <div class="quote-icon">“</div>
-                    <p class="fst-italic text-dark">"Using Python data mining for log correlation is exactly what modern Security Operation Centers need. This project addresses the 'alert fatigue' problem effectively."</p>
+                    <p class="fst-italic text-dark">"Integrating Scikit-learn for anomaly detection allows us to catch 'low-and-slow' attacks that standard Snort signatures often overlook."</p>
                     <hr>
-                    <h6 class="fw-bold mb-0">James Miller</h6>
-                    <small class="text-muted">Senior Network Architect</small>
+                    <h6 class="fw-bold mb-0">David Chen</h6>
+                    <small class="text-muted">Principal Security Architect</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card p-4 rounded-4 h-100 shadow-sm">
+                    <div class="quote-icon">“</div>
+                    <p class="fst-italic text-dark">"Being able to logically quarantine malicious traffic directly from the dashboard simplifies the workflow for security analysts immensely."</p>
+                    <hr>
+                    <h6 class="fw-bold mb-0">Marcus Thorne</h6>
+                    <small class="text-muted">Cyber Threat Intelligence Lead</small>
                 </div>
             </div>
         </div>
@@ -187,32 +189,68 @@
     <div class="container text-center">
         <h2 class="fw-bold mb-5">Our Team</h2>
         <div class="row g-4">
-            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>J</h5><p class="text-primary small">Project Leader/Scrum Master</p></div></div>
-            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>L</h5><p class="text-primary small">IDS configuration & Network Security Engineer</p></div></div>
-            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>R</h5><p class="text-primary small">Backend Developer</p></div></div>
-            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>A</h5><p class="text-primary small">Data analysis & Correlation Engineer</p></div></div>
-            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>K</h5><p class="text-primary small">Frontend & Dashboard Visualization Developer</p></div></div>
-            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>V</h5><p class="text-primary small">Visualization & Deployment Engineer</p></div></div>
+            <div class="col-md-4">
+                <div class="card p-4 border-0 shadow-sm h-100">
+                    <div class="mb-2"><span class="role-badge">LEAD</span></div>
+                    <h5 class="fw-bold mb-1">Ja</h5>
+                    <p class="text-muted small">Project Leader</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 border-0 shadow-sm h-100">
+                    <div class="mb-2"><span class="role-badge">SECURITY</span></div>
+                    <h5 class="fw-bold mb-1">L</h5>
+                    <p class="text-muted small">Network Security Engineer</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 border-0 shadow-sm h-100">
+                    <div class="mb-2"><span class="role-badge">API</span></div>
+                    <h5 class="fw-bold mb-1">R</h5>
+                    <p class="text-muted small">Backend Developer</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 border-0 shadow-sm h-100">
+                    <div class="mb-2"><span class="role-badge">DATA</span></div>
+                    <h5 class="fw-bold mb-1">Aa</h5>
+                    <p class="text-muted small">Correlation Engineer</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 border-0 shadow-sm h-100">
+                    <div class="mb-2"><span class="role-badge">UI/UX</span></div>
+                    <h5 class="fw-bold mb-1">K</h5>
+                    <p class="text-muted small">Visualization Developer</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-4 border-0 shadow-sm h-100">
+                    <div class="mb-2"><span class="role-badge">OPS</span></div>
+                    <h5 class="fw-bold mb-1">V</h5>
+                    <p class="text-muted small">Deployment Engineer</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
 <section id="admin" class="section-padding bg-dark text-white">
-    <div class="container">
-        <h2 class="text-center mb-5 fw-bold">Administrative Hub</h2>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="p-4 rounded-4" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+    <div class="container text-center">
+        <h2 class="mb-5 fw-bold">Administrative Hub</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-5">
+                <div class="p-4 rounded-4 text-start" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
                     <h4>Meeting Minutes</h4>
-                    <p class="text-secondary small">Official records of weekly syncs and technical pivots.</p>
-                    <a href="minutes/meeting1.pdf" target="_blank" class="btn btn-info btn-sm">View Meeting 1 (PDF)</a>
+                    <p class="text-secondary small">Official records of technical syncs and project milestones.</p>
+                    <a href="minutes/meeting1.pdf" target="_blank" class="btn btn-outline-info btn-sm">View Meeting Logs</a>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="p-4 rounded-4" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+            <div class="col-md-5">
+                <div class="p-4 rounded-4 text-start" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
                     <h4>Reflective Diaries</h4>
-                    <p class="text-secondary small">Weekly progress logs and personal contributions.</p>
-                    <a href="Reflection%20diaries/index.html" class="btn btn-info btn-sm">Open Diary Hub</a>
+                    <p class="text-secondary small">Weekly progress tracking and personal team contributions.</p>
+                    <a href="Reflection%20diaries/index.html" class="btn btn-info btn-sm text-dark fw-bold">Open Diary Hub</a>
                 </div>
             </div>
         </div>
@@ -226,4 +264,3 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
