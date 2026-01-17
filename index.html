@@ -3,19 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IntruSight | Lightweight Network IDS Dashboard</title>
+    <title>IntruSight | Web-Based IDS Analytics</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #0d6efd; --dark: #0f172a; --accent: #38bdf8; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #334155; }
-        .hero-section { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: white; padding: 100px 0; position: relative; overflow: hidden; }
-        .hero-section::after { content: ""; position: absolute; top: 0; right: 0; width: 300px; height: 300px; background: var(--primary); filter: blur(150px); opacity: 0.2; }
-        .tech-badge { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; background: rgba(56, 189, 248, 0.1); color: var(--accent); padding: 5px 12px; border-radius: 20px; border: 1px solid rgba(56, 189, 248, 0.3); }
-        .card { border: none; border-radius: 16px; transition: 0.3s; background: white; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
-        .dashboard-preview { border: 8px solid #1e293b; border-radius: 20px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.3); }
-        .testimonial-card { font-style: italic; border-left: 4px solid var(--accent); background: #f8fafc; }
+        :root { --primary: #0d6efd; --dark: #0f172a; --accent: #38bdf8; --glass: rgba(255, 255, 255, 0.9); }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; color: #334155; scroll-behavior: smooth; }
+        
+        /* Browser Frame Simulation */
+        .browser-frame { 
+            border: 1px solid #334155; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            background: #fff;
+        }
+        .browser-frame:hover { transform: scale(1.02); }
+        .browser-header { 
+            background: #1e293b; 
+            padding: 12px; 
+            display: flex; 
+            gap: 8px; 
+            align-items: center;
+        }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+        .browser-address {
+            background: #0f172a;
+            color: #94a3b8;
+            font-size: 0.75rem;
+            padding: 4px 20px;
+            border-radius: 20px;
+            margin-left: 15px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .hero-section { background: #0f172a; color: white; padding: 100px 0; }
+        .section-padding { padding: 80px 0; }
+        .tech-icon { font-size: 0.85rem; font-weight: bold; color: var(--accent); border: 1px solid var(--accent); padding: 4px 12px; border-radius: 6px; margin-right: 5px; }
     </style>
 </head>
 <body>
@@ -26,8 +52,8 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                <li class="nav-item"><a class="nav-link" href="#preview">Interface</a></li>
-                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="#preview">Web Interface</a></li>
+                <li class="nav-item"><a class="nav-link" href="#team">Scrum Team</a></li>
                 <li class="nav-item"><a class="nav-link" href="#admin">Admin Hub</a></li>
             </ul>
         </div>
@@ -36,133 +62,128 @@
 
 <header class="hero-section text-center">
     <div class="container">
-        <div class="mb-3">
-            <span class="tech-badge">PYTHON</span> <span class="tech-badge">REACT</span> <span class="tech-badge">MONGODB</span>
-        </div>
         <h1 class="display-3 fw-bold mb-3">IntruSight</h1>
-        <h2 class="h4 text-info mb-4">Network Intrusion Detection and Analytics</h2>
-        <p class="lead mx-auto mb-5 text-secondary" style="max-width: 800px;">
-            A high-performance dashboard integrating Snort and Zeek logs. Powered by Python Data Mining for anomaly detection and React for real-time visual intelligence.
+        <p class="h4 text-info mb-4 font-monospace">Web-Based Proactive IDS Analytics</p>
+        <p class="lead mb-5 opacity-75 mx-auto" style="max-width: 700px;">
+            A modern cybersecurity dashboard utilizing <strong>Python Data Mining</strong> and <strong>React</strong> to visualize network threats from Snort and Zeek engines.
         </p>
         <div class="d-flex justify-content-center gap-3">
-            <a href="#preview" class="btn btn-info btn-lg px-4">See Interface</a>
-            <a href="#admin" class="btn btn-outline-light btn-lg px-4">View Project Logs</a>
+            <a href="#preview" class="btn btn-info btn-lg px-4 fw-bold">View Demo Interface</a>
+            <a href="#admin" class="btn btn-outline-light btn-lg px-4">Project Documentation</a>
         </div>
     </div>
 </header>
 
-<section id="preview" class="py-5 bg-light">
+<section id="features" class="section-padding bg-white">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <h2 class="fw-bold">Technical Features</h2>
+            <p class="text-muted">High-performance tools integrated into one web-based platform.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 p-4 shadow-sm border-0 bg-light">
+                    <h5 class="fw-bold">Intrusion Detection</h5>
+                    <p class="small text-muted">Native integration with <strong>Snort 3</strong> and <strong>Zeek</strong> for real-time packet inspection and log generation.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 p-4 shadow-sm border-0 bg-light">
+                    <h5 class="fw-bold">ML Anomaly Detection</h5>
+                    <p class="small text-muted">Using <strong>Python (Scikit-learn)</strong> to cluster log data and identify zero-day attack patterns.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 p-4 shadow-sm border-0 bg-light">
+                    <h5 class="fw-bold">React Visuals</h5>
+                    <p class="small text-muted">Highly responsive <strong>React.js</strong> components including Recharts for live traffic visualization.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="preview" class="section-padding bg-light">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-5">
+                <h2 class="fw-bold mb-3">The Web Dashboard</h2>
+                <p class="text-muted">Our web-based approach allows security analysts to monitor network health from any device. The frontend communicates via a Python FastAPI to fetch indexed logs from MongoDB.</p>
+                <div class="mt-4">
+                    <span class="tech-icon">React 18</span>
+                    <span class="tech-icon">FastAPI</span>
+                    <span class="tech-icon">MongoDB</span>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="browser-frame">
+                    <div class="browser-header">
+                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                        <div class="browser-address">intrusight.io/dashboard/main</div>
+                    </div>
+                    <img src="assets/dashboard-mockup.png" class="img-fluid" alt="Main Dashboard View">
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center flex-row-reverse mt-5">
+            <div class="col-lg-5">
+                <h2 class="fw-bold mb-3">Deep-Dive Analytics</h2>
+                <p class="text-muted">Beyond simple alerts, IntruSight provides a forensic view. Analyze historical data trends to improve firewall rules and network security posture.</p>
+            </div>
+            <div class="col-lg-7">
+                <div class="browser-frame">
+                    <div class="browser-header">
+                        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green"></div>
+                        <div class="browser-address">intrusight.io/dashboard/analytics</div>
+                    </div>
+                    <img src="assets/dashboard-analytics.png" class="img-fluid" alt="Analytics Detail View">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="team" class="section-padding bg-white">
     <div class="container text-center">
-        <h2 class="fw-bold mb-2">Visualizing the Threat Landscape</h2>
-        <p class="text-muted mb-5">Real-time React components rendering Python-processed security events.</p>
-        <div class="dashboard-preview mx-auto" style="max-width: 1000px;">
-            <img src="assets/dashboard-mockup.png" class="img-fluid" alt="IntruSight Dashboard Interface">
+        <h2 class="fw-bold mb-5">Our Team</h2>
+        <div class="row g-4">
+            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>J</h5><p class="text-primary small">Scrum Master</p></div></div>
+            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>L</h5><p class="text-primary small">Developer</p></div></div>
+            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>R</h5><p class="text-primary small">Data Scientist</p></div></div>
+            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>V</h5><p class="text-primary small">React Architect</p></div></div>
+            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm"><h5>K</h5><p class="text-primary small">Integration Engineer</p></div></div>
+            <div class="col-md-4"><div class="card p-4 border-0 shadow-sm bg-light"><h5>A</h5><p class="text-primary small">Product Owner</p></div></div>
         </div>
     </div>
 </section>
 
-<section class="py-5 container">
-    <h2 class="text-center fw-bold mb-5">What Security Experts Say</h2>
-    <div class="row g-4">
-        <div class="col-md-6">
-            <div class="testimonial-card p-4 rounded">
-                <p class="mb-3">"IntruSight's ability to cluster thousands of Snort alerts into actionable insights is a game-changer for our SOC team."</p>
-                <footer class="fw-bold text-dark">— Senior Security Architect</footer>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="testimonial-card p-4 rounded text-end" style="border-left: none; border-right: 4px solid var(--accent);">
-                <p class="mb-3">"The React-driven interface provides the fastest visualization of Zeek logs I've seen in an open-source project."</p>
-                <footer class="fw-bold text-dark">— Network Admin, Global Tech</footer>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="team" class="py-5 bg-white">
+<section id="admin" class="section-padding bg-dark text-white">
     <div class="container">
-        <h2 class="fw-bold text-center mb-5">The Scrum Team</h2>
-        <div class="row g-4 text-center">
-            <div class="col-md-4">
-                <div class="card p-4 shadow-sm border-top border-primary border-4">
-                    <h5 class="fw-bold">Jav</h5>
-                    <p class="text-primary mb-1">Scrum Master</p>
-                    <small class="text-muted">System Architecture & Backend Python</small>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4 shadow-sm">
-                    <h5 class="fw-bold">L</h5>
-                    <p class="text-primary mb-1">Full Stack Developer</p>
-                    <small class="text-muted">Python API & Log Integration</small>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4 shadow-sm">
-                    <h5 class="fw-bold">R</h5>
-                    <p class="text-primary mb-1">Data Scientist</p>
-                    <small class="text-muted">Frontend UI & Documentation</small>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4 shadow-sm">
-                    <h5 class="fw-bold">V</h5>
-                    <p class="text-primary mb-1">React Architect</p>
-                    <small class="text-muted">Data Mining & Documentation</small>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4 shadow-sm">
-                    <h5 class="fw-bold">K</h5>
-                    <p class="text-primary mb-1">Developer</p>
-                    <small class="text-muted">HTML/CSS & System Integration</small>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-4 shadow-sm bg-light">
-                    <h5 class="fw-bold">A</h5>
-                    <p class="text-primary mb-1">Product Owner</p>
-                    <small class="text-muted">Requirements & Quality Assurance</small>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="admin" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="fw-bold text-center mb-5">Administrative Logs</h2>
+        <h2 class="text-center mb-5 fw-bold">Administrative Hub</h2>
         <div class="row g-4">
             <div class="col-md-6">
-                <div class="card p-4">
-                    <h3>Meeting Minutes</h3>
-                    <div class="d-flex justify-content-between align-items-center mt-3">
-                        <span>Meeting 1: Project Kickoff</span>
-                        <a href="minutes/meeting1.pdf" target="_blank" class="btn btn-sm btn-dark">Open PDF</a>
-                    </div>
+                <div class="p-4 rounded-4" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <h4>Meeting Minutes</h4>
+                    <p class="text-secondary small">Official records of weekly syncs and technical pivots.</p>
+                    <a href="minutes/meeting1.pdf" target="_blank" class="btn btn-info btn-sm">View Meeting 1 (PDF)</a>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card p-4">
-                    <h3>Reflective Diaries</h3>
-                    <div class="d-flex justify-content-between align-items-center mt-3">
-                        <span>Week 1: Reflective Dairies (5 - 11 Jan)</span>
-                        <a href="Reflection diaries/week1.html" class="btn btn-sm btn-dark">Read Entry</a>
-                    </div>
+                <div class="p-4 rounded-4" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+                    <h4>Reflective Diaries</h4>
+                    <p class="text-secondary small">Weekly progress logs and personal contributions.</p>
+                    <a href="Reflection diaries/week1.html" class="btn btn-info btn-sm">View Week 1 Diary</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<footer class="bg-dark text-white text-center py-4">
-    <p class="small mb-0">&copy; 2026 IntruSight Team.</p>
+<footer class="py-4 text-center text-muted border-top">
+    <small>&copy; 2026 IntruSight Project Team. All Rights Reserved.</small>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
