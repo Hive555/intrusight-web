@@ -15,6 +15,12 @@
         .week-title { margin-top: 50px; padding-bottom: 10px; color: #0f172a; }
         .sticky-nav { position: sticky; top: 15px; z-index: 1000; text-align: center; margin-bottom: 30px; }
         .role-text { font-size: 0.8rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+        
+        /* This ensures column widths are identical in every table */
+        table { table-layout: fixed; width: 100%; }
+        th:nth-child(1), td:nth-child(1) { width: 25%; }
+        th:nth-child(2), td:nth-child(2) { width: 50%; }
+        th:nth-child(3), td:nth-child(3) { width: 25%; }
     </style>
 </head>
 <body id="top">
@@ -37,9 +43,9 @@
     <div class="hub-card mx-auto" style="max-width: 950px;">
         <div class="hub-header text-center">
             <h1 class="fw-bold">Team Reflective Diaries</h1>
-            <p class="opacity-75 mb-0">Weekly Personal Progress & Reflection Logs (Full Schedule)</p>
+            <p class="opacity-75 mb-0">Weekly Personal Progress & Reflection Logs</p>
             <div class="mt-3">
-                <a href="../index.html" class="btn btn-outline-light btn-sm px-4 rounded-pill">← Back to Main Website</a>
+                <a href="../index.html" class="btn btn-outline-light btn-sm px-4 rounded-pill">← Back to Homepage</a>
             </div>
         </div>
 
@@ -47,7 +53,7 @@
             
             <h4 id="week1" class="fw-bold week-title border-bottom">Week 1 (Jan 5 - Jan 11)</h4>
             <table class="table align-middle mb-5">
-                <thead class="table-light"><tr><th>Team Member</th><th>Project Role</th><th class="text-end">Action</th></tr></thead>
+                <thead class="table-light"><tr><th>Member</th><th>Role</th><th class="text-end">Action</th></tr></thead>
                 <tbody>
                     <tr><td><strong>J</strong></td><td><span class="role-text">Project Leader</span></td><td class="text-end"><a href="week1/javier_w1.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
                     <tr><td><strong>L</strong></td><td><span class="role-text">Network Security</span></td><td class="text-end"><a href="week1/lucas_w1.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
@@ -60,6 +66,7 @@
 
             <h4 id="week2" class="fw-bold week-title border-bottom">Week 2 (Jan 12 - Jan 18)</h4>
             <table class="table align-middle mb-5">
+                <thead class="table-light"><tr><th>Member</th><th>Role</th><th class="text-end">Action</th></tr></thead>
                 <tbody>
                     <tr><td><strong>J</strong></td><td><span class="role-text">Project Leader</span></td><td class="text-end"><a href="week2/javier_w2.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
                     <tr><td><strong>L</strong></td><td><span class="role-text">Network Security</span></td><td class="text-end"><a href="week2/lucas_w2.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
@@ -72,6 +79,7 @@
 
             <h4 id="week3" class="fw-bold week-title border-bottom">Week 3 (Jan 19 - Jan 25)</h4>
             <table class="table align-middle mb-5">
+                <thead class="table-light"><tr><th>Member</th><th>Role</th><th class="text-end">Action</th></tr></thead>
                 <tbody>
                     <tr><td><strong>J</strong></td><td><span class="role-text">Project Leader</span></td><td class="text-end"><a href="week3/javier_w3.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
                     <tr><td><strong>L</strong></td><td><span class="role-text">Network Security</span></td><td class="text-end"><a href="week3/lucas_w3.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
@@ -84,6 +92,7 @@
 
             <h4 id="week4" class="fw-bold week-title border-bottom">Week 4 (Jan 26 - Feb 1)</h4>
             <table class="table align-middle mb-5">
+                <thead class="table-light"><tr><th>Member</th><th>Role</th><th class="text-end">Action</th></tr></thead>
                 <tbody>
                     <tr><td><strong>J</strong></td><td><span class="role-text">Project Leader</span></td><td class="text-end"><a href="week4/javier_w4.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
                     <tr><td><strong>L</strong></td><td><span class="role-text">Network Security</span></td><td class="text-end"><a href="week4/lucas_w4.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
@@ -96,6 +105,7 @@
 
             <h4 id="week5" class="fw-bold week-title border-bottom">Week 5 (Feb 2 - Feb 8)</h4>
             <table class="table align-middle mb-5">
+                <thead class="table-light"><tr><th>Member</th><th>Role</th><th class="text-end">Action</th></tr></thead>
                 <tbody>
                     <tr><td><strong>J</strong></td><td><span class="role-text">Project Leader</span></td><td class="text-end"><a href="week5/javier_w5.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
                     <tr><td><strong>L</strong></td><td><span class="role-text">Network Security</span></td><td class="text-end"><a href="week5/lucas_w5.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
@@ -108,6 +118,7 @@
 
             <h4 id="week6" class="fw-bold week-title border-bottom">Week 6 (Feb 9 - Feb 15)</h4>
             <table class="table align-middle mb-5">
+                <thead class="table-light"><tr><th>Member</th><th>Role</th><th class="text-end">Action</th></tr></thead>
                 <tbody>
                     <tr><td><strong>J</strong></td><td><span class="role-text">Project Leader</span></td><td class="text-end"><a href="week6/javier_w6.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
                     <tr><td><strong>L</strong></td><td><span class="role-text">Network Security</span></td><td class="text-end"><a href="week6/lucas_w6.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
@@ -120,6 +131,7 @@
 
             <h4 id="week7" class="fw-bold week-title border-bottom">Week 7 (Feb 16 - Feb 22)</h4>
             <table class="table align-middle mb-5">
+                <thead class="table-light"><tr><th>Member</th><th>Role</th><th class="text-end">Action</th></tr></thead>
                 <tbody>
                     <tr><td><strong>J</strong></td><td><span class="role-text">Project Leader</span></td><td class="text-end"><a href="week7/javier_w7.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
                     <tr><td><strong>L</strong></td><td><span class="role-text">Network Security</span></td><td class="text-end"><a href="week7/lucas_w7.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
@@ -132,6 +144,7 @@
 
             <h4 id="week8" class="fw-bold week-title border-bottom">Week 8 (Feb 23 - Mar 1)</h4>
             <table class="table align-middle mb-5">
+                <thead class="table-light"><tr><th>Member</th><th>Role</th><th class="text-end">Action</th></tr></thead>
                 <tbody>
                     <tr><td><strong>J</strong></td><td><span class="role-text">Project Leader</span></td><td class="text-end"><a href="week8/javier_w8.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
                     <tr><td><strong>L</strong></td><td><span class="role-text">Network Security</span></td><td class="text-end"><a href="week8/lucas_w8.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
@@ -144,6 +157,7 @@
 
             <h4 id="week9" class="fw-bold week-title border-bottom">Week 9 (Mar 2 - Mar 8)</h4>
             <table class="table align-middle mb-5">
+                <thead class="table-light"><tr><th>Member</th><th>Role</th><th class="text-end">Action</th></tr></thead>
                 <tbody>
                     <tr><td><strong>J</strong></td><td><span class="role-text">Project Leader</span></td><td class="text-end"><a href="week9/javier_w9.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
                     <tr><td><strong>L</strong></td><td><span class="role-text">Network Security</span></td><td class="text-end"><a href="week9/lucas_w9.pdf" target="_blank" class="btn btn-sm btn-outline-dark btn-view">View PDF</a></td></tr>
@@ -154,16 +168,17 @@
                 </tbody>
             </table>
 
-            <div class="mt-5 pt-4 text-center border-top">
-                <a href="#top" class="text-decoration-none fw-bold me-4">↑ Back to Top</a>
-                <a href="../index.html" class="text-decoration-none text-secondary">Back to Homepage</a>
+            <div class="mt-5 text-center">
+                <a href="#top" class="text-decoration-none text-primary fw-bold">↑ Back to Top</a>
+                <br><br>
+                <a href="../index.html" class="text-decoration-none text-secondary small">Return to Homepage</a>
             </div>
         </div>
     </div>
 </div>
 
 <footer class="text-center py-4 text-muted small">
-    &copy; 2026 IntruSight Project Team. Confidential Internal Documentation.
+    &copy; 2026 IntruSight Project Team.
 </footer>
 
 </body>
