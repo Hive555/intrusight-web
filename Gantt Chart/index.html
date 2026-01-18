@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Schedule Hub | IntruSight</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #f8fafc; color: #1e293b; }
+        .hub-header { background: #0f172a; color: white; padding: 60px 0; margin-bottom: 40px; }
+        .file-card { transition: 0.3s; border: 1px solid #e2e8f0; border-radius: 16px; }
+        .file-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .icon-box { width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body>
+
+<header class="hub-header text-center">
+    <div class="container">
+        <h1 class="fw-bold">Project Schedule Hub</h1>
+        <p class="lead opacity-75">Timeline, Sprints, and Deliverables</p>
+        <a href="../index.html" class="btn btn-outline-light btn-sm mt-3 px-4 rounded-pill">← Back to Main Website</a>
+    </div>
+</header>
+
+<div class="container">
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-5">
+            <div class="card h-100 p-4 file-card">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="icon-box bg-danger text-white rounded-3 me-3">
+                        <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold mb-0">Project Schedule</h5>
+                        <small class="text-muted">Official PDF Version</small>
+                    </div>
+                </div>
+                <p class="text-secondary small mb-4">Finalized Gantt chart showing all 10 sprints. Use this for formal submissions and progress reviews.</p>
+                <a href="Project_Schedule_Final.pdf" target="_blank" class="btn btn-primary w-100 fw-bold py-2">View Official PDF</a>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="card h-100 p-4 file-card">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="icon-box bg-success text-white rounded-3 me-3">
+                        <svg width="30" height="30" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold mb-0">Raw Gantt Data</h5>
+                        <small class="text-muted">Editable CSV Format</small>
+                    </div>
+                </div>
+                <p class="text-secondary small mb-4">The raw dataset used to generate the timeline. Download this to make modifications in Excel.</p>
+                <a href="IntruSight_Gantt_Data.csv" download class="btn btn-outline-success w-100 fw-bold py-2">Download CSV Data</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
